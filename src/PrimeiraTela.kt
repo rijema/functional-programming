@@ -1,18 +1,19 @@
 import kotlin.browser.*
 
-fun clicandoBotao(){
-    var variavelInstanciada = document.getElementById("primeiraDiv")
-
-    variavelInstanciada?.innerHTML += "Clicando no botão clicandoBotao" + "<br>"
+fun imprimindoTela(){
+    val variavelInstanciada = document.getElementById("segundaDiv")
+    variavelInstanciada?.innerHTML += "+1 to study for Kotlin" + "<br>"
     println("Ok, teste benéfico")
-    window.alert("Janela aberta ao clicar na função setada no div")
+    window.alert("Kotlin is a good language :)")
 }
 
-fun imprimindoTela(){
-    var variavelUtilizadaTela = document.getElementById("segundaDiv")
-
+fun clicandoBotao(){
+    val variavelUtilizadaTela = document.getElementById("primeiraDiv")
     //println("Conteudo =" + variavelUtilizadaTela?.innerHTML)
-    variavelUtilizadaTela?.innerHTML += "Clicando no botão imprimindoTela" + "<br>"
+    val listaAssuntos = listOf("Recursivity","High Level Functions","Lazy","Yield")
+    variavelUtilizadaTela?.innerHTML += listaAssuntos.take((0 until listaAssuntos.size-1).random())
+    variavelUtilizadaTela?.innerHTML += "<br>"
+    val trying_to_not_wakeup = mutableListOf<String>()
     println("Adicionando na tela")
 }
 

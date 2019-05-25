@@ -1,51 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head bgcolor="#cacaca">
+<head>
     <meta charset="UTF-8">
     <title>Projeto LPF</title>
     <script src ="out/production/Devs/lib/kotlin.js"></script>
     <script src ="out/production/Devs/Devs.js"></script>
 </head>
-<!-- <body bgcolor="#98fb98"> -->
-<body background="https://media.giphy.com/media/3o6ZtcZCYVzROMckY8/giphy.gif">
+<body bgcolor="#98fb98">
+<!-- <body background="https://media.giphy.com/media/3o6ZtcZCYVzROMckY8/giphy.gif">-->
 <!--<body background="https://cdn.dribbble.com/users/583436/screenshots/1678788/big.gif"> -->
     <center>
-        <h1> Projeto feito por Luis Byra e Richard Jereco </h1>
+        <h1> Functional Programming Language Project </h1>
     </center>
-    <hr>
-    Seguir para a nova página???
-    <a href="Second.html"> Ir para página secundária </a>
-    <button onclick="window.location.href='Third.html';"> CLICA AQUI SAFADO!</button>
-    <hr>
-    <hr>
-    PrimeiraDiv
-    <hr>
-    <div id="primeiraDiv">
-        A branch inicial será o ponto de partida para desenvolvimento
-        <center><button onClick="Devs.clicandoBotao()"> Botão de desenvolvimento </button></center>
 
-    </div>
+    <p> <hr>
+    Links to download: <button onclick="window.location.href='Third.html';"> Download </button>
+    Classes Schedule: <button onclick="window.location.href='Second.html';"> Schedule </button>
+    <hr> </p>
+
+    <center> <h2> What's Kotlin? </h2>  </center>
+
+    <p> Kotlin is a general purpose, open source, statically typed “pragmatic” programming language for the JVM and Android
+    that combines object-oriented and functional programming features. It is focused on interoperability, safety, clarity,
+    and tooling support. Versions of Kotlin for JavaScript (ECMAScript 5.1) and native code (using LLVM) are in the works.
+
+    Kotlin originated at JetBrains, the company behind IntelliJ IDEA, in 2010, and has been open source since 2012. The Kotlin
+    team currently has more than 20 full-time members from JetBrains, and the Kotlin project on GitHub has about 100 contributors.
+        JetBrains uses Kotlin in many of its products including its flagship IntelliJ IDEA. </p>
 
     <hr>
-    SegundaDiv
-    <hr>
+    <center> <h2> Is Kotlin a FP lang?</h2> </center>
 
+    When we think about Kotlin, OOP is always implicit. But that’s not strictly necessary. Kotlin is still open to a
+    different paradigm thanks to some of its built-in features. I’m obviously referring to FP.
+
+    Having the possibility to pass functions as function arguments, or return functions from other functions opens the
+    language to new techniques like deferred computation. If you return functions on your different layers instead of
+    already computed values, what you get back from it is a composed deferred computation, or in other words, lazy
+    evaluation. Your computations are deferred in time, still not run.
+
+    You can also stare at the language a bit longer, and you will be able to find tons of additional features that you can
+    find on many type safe FP languages: Type inference, operator overloading, good support for syntax improvements
+    (implemented by extension functions), collection operations as map, flatMap, fold, reduce…, or even algebraic data types
+    (sealed classes).
+
+    What a functional programing lang is, is not clearly defined and it depends on where you look at or which posts do you
+    read. The boundaries for that could be a bit blurry. But honestly, that is not such important here. In the end, truth is
+    Kotlin is kind of “enabling” this higher abstraction level paradigm just by adding some interesting built-in features.
+    So if we wanted to achieve it, we could.
+
+    <hr> <p>
+
+        <div id="primeiraDiv">
+            <center><h3>Which subjects do we see in this programming Language? </h3> </center>
+            <center><button onClick="Devs.clicandoBotao()"> See the subject to study today </button></center>
+        </div>
+
+    <hr> </p>
+
+    <hr> <p>
+
+        <div id="segundaDiv">
+            <center><h3> Add time to study </h3> </center>
+            <center><button onClick="Devs.imprimindoTela()"> Add here </button></center>
+        </div>
+<!-- <div id="terceiraDiv">
+<hr>
+TextosMotivacionais
+<hr>
+
+<div id="textosMotivacionais">
+    <p> Dog goes "woof"
+        Cat goes "meow" </p>
+    <p> Bird goes "tweet"
+        And mouse goes "squeek" </p>
+</div>
+            <form action="/yourscript.cgi-or-your-page.html" method="POST" onsubmit="return checkCheckBox(this)">
+                Eu aceito: <input type="checkbox" value="0" name="agree">
+                <input type="submit" value="Próximo passo">
+                <input type="button" value="NÃO ACEITO" onclick="document.location.href='[SEU_ENDERECO_PARA_QUEM_NAO_CONCORDA]';">
+            </form>
+            
+     <a href="Second.html"> Ir para página secundária </a>
     <div id="segundaDiv">
-        <center> <button onClick="Devs.imprimindoTela()"> Botão para repetir nome </button></center>
-        <h3><i>Funcionou a impressão na tela!</i></h3>
+        <center> <button onClick="Devs.clicandoBotao()"> Botão para repetir nome </button></center>
+        
+        </div> -->
 
-    </div>
+    <hr> </p>
 
-    <hr>
-    TextosMotivacionais
-    <hr>
-
-    <div id="textosMotivacionais">
-           <p> Dog goes "woof"
-               Cat goes "meow" </p>
-           <p> Bird goes "tweet"
-               And mouse goes "squeek" </p>
-    </div>
+<a href="href:https://kotlinlang.org/" title="Ir para o site oficial"> "<img src="images/1024px-Kotlin-logo.svg.png" width="50" height="50 "> </a>
 
 </body>
 </html>
