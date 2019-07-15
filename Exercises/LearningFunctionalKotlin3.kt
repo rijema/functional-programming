@@ -104,8 +104,8 @@ fun auxiliarMaior(f:(Int)->Int,maior:Int,menor:Int,maiorEntre:Int):Int {
 }
 
 //Cria conjuntos dentro de conjuntos a partir de uma lista de funções (sendo a lista [(f,g,h,i)] para (x) deve-se retornar f(g(h(i(x)))) )
-fun receberLista(f:List<(Int)->Int>):(Int)->Int 
-    { x -> { if(f.size() == 1){
+fun receberLista(f:List<(Int)->Int>):(Int)->Int = 
+{ x -> { if(f.size() == 1){
                 f(x)
     } else { f(receberLista(f.drop(1))) }
     }
@@ -184,6 +184,7 @@ fun reducaoTermos(l:List<Int>):Int{
     return l.filter(x -> x>5).reduce(x,y -> x*y)
 }
 
+
 //A partir dessa linha utilizo a própria lista criada inicialmente
 //Pega o menor elemento de uma lista
 fun menor(l:List):Int = when(l){
@@ -212,6 +213,42 @@ fun menor(l:List<Int>):Int{
     return ordenado[0]
 }
 
+
+
+fun troca(frase:String):String {
+            if(frase.isEmpty()){
+                return " "
+            }
+            if(frase.elementAt(0) == '.'){
+                return 'a' + troca(frase.drop(2))
+
+            }
+            else if(frase.elementAt(0) == '-'){
+                if(frase.elementAt(2) == '.'){
+                    return 'b' + troca(frase.drop(4))
+                } else {
+    return 'c'+ troca(frase.drop(4))
+        }
+    }
+    return " "
+}
+
+ //QUINTA
+
+ 
+
+//Cria inversamente conjuntos dentro de conjuntos a partir de uma lista de funções (sendo a lista [(f,g,h,i)] para (x) deve-se retornar i(h(g(f(x)))) )
+fun receberListaInverso(f:List<(Int)->Int>):(Int)->Int =  {x -> receberAuxiliar(f,x,f.size)} 
+//Auxiliar da função inversa, dando como entrada um contador que irá desempilhar a recursão quando apenas o último elemento estiver contido na lista
+fun receberAuxiliar(f:List<(Int)->Int>,x:Int,contador:Int):Int {
+        if(contador==0) {
+            return x
+        } else { 
+            return f(receberAuxiliar(f.drop(1),x,contador-1))}
+}
+
+
+
 /* MAIN's  
 //Main com tipos de listas diferentes, recomendo um uso por vez.
 fun main() {
@@ -221,6 +258,11 @@ fun main() {
     println(menor(l1))
     println(reducaoTermos(l1))
     println(contador(l1,11))
+}
+
+//Main com o código morse
+fun main(){
+    println(troca(".-.--.-.-...-.-..-.-"))
 }
 
 //Main com tipos de listas diferentes, recomendo um uso por vez.
